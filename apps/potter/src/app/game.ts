@@ -12,10 +12,11 @@ export class Game {
         return arr.reduce((a,b)=>a+b);  
     }
     public TotalDiscount(arr:number[]){
-        let discount: number[] = [0.95,0.9,0.85,0.8,0.75];
+        let discount: number[] = [0.95,0.9,0.8,0.75];
         while(this.SumBook(arr) > 0){
             var type_count:number = 0;
             var temp_price:number = 0;
+            console.log(arr.length);
             for(var i = 0;i<arr.length;i++) { 
                 if(arr[i] > 0){
                     arr[i]--;
@@ -24,6 +25,7 @@ export class Game {
              }
             if(type_count > 1){
                 temp_price += type_count * 100 * discount[type_count-2];
+                
             }
             else{
                 temp_price += type_count * 100; 
