@@ -1,9 +1,9 @@
 export class Game {
-    buy(pins: number) {
-
-    }
-
+        private Total = 0;
+        buy(books: number){
+            this.Total += books * 100;
+        }
     get total() {
-        return -1;
+        return this.Total
     }
 }
