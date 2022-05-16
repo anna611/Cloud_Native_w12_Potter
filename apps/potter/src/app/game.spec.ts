@@ -24,4 +24,8 @@ describe('Game', () => {
     game.buy(1,2,0,0,0);
     expect(game.total).toBe(290);
   });
+  test('fourth test', () => {
+    game.buy(1,2,1,1,1);
+    expect(game.total).toBe(475);
+  });
 });
